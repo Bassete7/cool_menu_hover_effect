@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu hover effect</title>
+</head>
+
+<style>
+    *,::before,::after{
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+    }
+    html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+    .container{
+        display: flex;
+        gap: 2rem;
+    }
+    .container h2{
+        position: relative;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .container h2::before{
+        content: '';
+        position: absolute;
+        bottom: -.3rem;
+        left: 0;
+        width: 0;
+        height: .3rem;
+        background-color: #0073ff;
+        transition: all .4s ease-out;
+    }
+    .container h2:hover::before{
+        width: 50%;
+        left: 50%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>home</h2>
+        <h2>about</h2>
+        <h2>services</h2>
+        <h2>portfolio</h2>
+        <h2>contact</h2>
+    </div>
+</body>
+</html>
